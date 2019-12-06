@@ -37,8 +37,7 @@ protected:
 	class UCableComponent* CableTopComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Bow")
-	class UCableComponent* CableBottomComponent;
-	
+	class UCableComponent* CableBottomComponent;	
 
 protected:
 

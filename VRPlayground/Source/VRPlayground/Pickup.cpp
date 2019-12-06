@@ -8,7 +8,7 @@
 // Sets default values
 APickup::APickup()
 {
-	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root")); 
 	RootComponent = Root; 
 
 	Base = CreateDefaultSubobject<UBoxComponent>(TEXT("Base"));

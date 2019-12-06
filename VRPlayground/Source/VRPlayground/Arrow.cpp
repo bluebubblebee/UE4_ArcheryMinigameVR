@@ -22,7 +22,7 @@ void AArrow::AttachToObject(USceneComponent* Object, FVector OffsetPosition)
 
 	// Remove collision from base and Mesh
 	Base->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	Base->SetSimulatePhysics(false);
+	Base->SetSimulatePhysics(false); 
 	Base->SetEnableGravity(false);
 
 	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
@@ -64,4 +64,17 @@ void AArrow::OnDestroyArrow()
 	GetWorld()->GetTimerManager().ClearTimer(DestroyArrowTimerHandle);
 
 	Destroy();
+}
+
+
+void AArrow::OnHit()
+{
+	// Disable Pickup and Physics simulation
+	bEnablePickup = false;
+	bSimulatePhysics = false;
+
+	Mesh->SetSimulatePhysics(false);
+	Mesh->SetEnableGravity(false);
+	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	
 }

@@ -35,6 +35,9 @@ public:
 
 	void OnShoot_Implementation(float force);
 
+	// On Hit method when collides with another actor
+	void OnHit();
+
 protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Arrow")

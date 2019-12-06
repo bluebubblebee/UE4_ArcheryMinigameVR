@@ -33,6 +33,8 @@ public:
 	APickup();
 	virtual void Tick(float DeltaTime) override;
 
+	FORCEINLINE UBoxComponent* GetBase() { return Base; };
+
 protected:
 	virtual void BeginPlay() override;	
 
